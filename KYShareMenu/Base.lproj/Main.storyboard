@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="klN-Ax-lay">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="omA-sQ-LZS"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="分享" id="yns-p8-c7B">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="0pI-bc-P5l">
+                                            <connections>
+                                                <segue destination="HlM-T0-eZR" kind="presentation" id="ZVf-i6-EEb"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="klN-Ax-lay" secondAttribute="trailing" id="Kk6-4P-J91"/>
+                            <constraint firstItem="klN-Ax-lay" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="NcP-pt-sT8"/>
+                            <constraint firstItem="klN-Ax-lay" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="zcD-G0-55M"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Share View Controller-->
+        <scene sceneID="dbs-en-YFo">
+            <objects>
+                <viewController id="HlM-T0-eZR" customClass="KYShareViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jfQ-SL-9fa"/>
+                        <viewControllerLayoutGuide type="bottom" id="Uqv-Or-8ij"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rqU-4G-PwZ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="trC-Ge-vYl" userLabel="DIssmissButton">
+                                <rect key="frame" x="0.0" y="0.0" width="611" height="600"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismissBt:" destination="HlM-T0-eZR" eventType="touchUpInside" id="Dvl-jC-mSe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="101" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OEM-zZ-ven" userLabel="Weibo">
+                                <rect key="frame" x="-6" y="532" width="60" height="60"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="sina">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareBtnAction:" destination="HlM-T0-eZR" eventType="touchUpInside" id="nKD-zY-Mry"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="106" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KUE-vp-4zk" userLabel="Tencent">
+                                <rect key="frame" x="244" y="532" width="60" height="60"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" image="email"/>
+                                <connections>
+                                    <action selector="shareBtnAction:" destination="HlM-T0-eZR" eventType="touchUpInside" id="tvO-Ou-g0I"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="102" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4N6-uV-OTX" userLabel="Wechat">
+                                <rect key="frame" x="47" y="532" width="60" height="60"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" image="wechat">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareBtnAction:" destination="HlM-T0-eZR" eventType="touchUpInside" id="wRv-wx-qW7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="103" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7c4-Z8-4OB" userLabel="Friend-circle">
+                                <rect key="frame" x="95" y="532" width="60" height="60"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="friend">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareBtnAction:" destination="HlM-T0-eZR" eventType="touchUpInside" id="jnT-vO-tsE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="104" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xWI-IT-dnn" userLabel="QQ">
+                                <rect key="frame" x="95" y="532" width="60" height="60"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="qq">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareBtnAction:" destination="HlM-T0-eZR" eventType="touchUpInside" id="cSd-tu-OT7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="105" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F3f-Fi-iSe" userLabel="Douban">
+                                <rect key="frame" x="198" y="532" width="60" height="60"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="douban">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareBtnAction:" destination="HlM-T0-eZR" eventType="touchUpInside" id="oDI-79-9xJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="trC-Ge-vYl" firstAttribute="top" secondItem="rqU-4G-PwZ" secondAttribute="top" id="Tqg-kh-XyW"/>
+                            <constraint firstAttribute="trailing" secondItem="trC-Ge-vYl" secondAttribute="trailing" id="Yhw-f6-ydi"/>
+                            <constraint firstItem="trC-Ge-vYl" firstAttribute="leading" secondItem="rqU-4G-PwZ" secondAttribute="leading" id="Yjm-ds-Lns"/>
+                            <constraint firstItem="Uqv-Or-8ij" firstAttribute="top" secondItem="trC-Ge-vYl" secondAttribute="bottom" id="tHK-Hj-4IC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="douban" destination="F3f-Fi-iSe" id="SBi-em-UPW"/>
+                        <outlet property="friendcircle" destination="7c4-Z8-4OB" id="sjB-xx-yM7"/>
+                        <outlet property="qq" destination="xWI-IT-dnn" id="aVw-jf-PAv"/>
+                        <outlet property="tencent" destination="KUE-vp-4zk" id="OpF-o3-s8m"/>
+                        <outlet property="wechat" destination="4N6-uV-OTX" id="bVg-32-KNc"/>
+                        <outlet property="weibo" destination="OEM-zZ-ven" id="27d-dD-u0B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z9w-YX-9fy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1015" y="431"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="douban" width="60" height="60"/>
+        <image name="email" width="60" height="60"/>
+        <image name="friend" width="60" height="60"/>
+        <image name="qq" width="60" height="60"/>
+        <image name="sina" width="60" height="60"/>
+        <image name="wechat" width="60" height="60"/>
+    </resources>
+</document>
