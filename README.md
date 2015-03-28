@@ -3,7 +3,6 @@
 
 ![](demo.gif)
 
-
 ##Usage
 
 本Demo使用了[onevcat](https://github.com/onevcat)的[VVBlurPresentation](https://github.com/onevcat/VVBlurPresentation)实现present之后背景模糊。
@@ -27,3 +26,8 @@
     [self presentViewController:shareVC animated:YES completion:nil];
 }
 ```
+
+
+##Required
+
+iOS8+
